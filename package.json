@@ -12,7 +12,14 @@
         "type": "git",
         "url": "git://github.com/cambecc/earth.git"
     },
-    "engine": "node >= 0.10.21",
+    "engines": {
+        "node": ">=20.19.0"
+    },
+    "scripts": {
+        "dev": "vite --host 0.0.0.0",
+        "build": "vite build",
+        "preview": "vite preview --host 0.0.0.0"
+    },
     "dependencies": {
         "when": "2.6.0",
         "swig": "1.2.2",
@@ -21,6 +28,7 @@
     },
     "devDependencies": {
         "grunt": "~0.4.1",
-        "grunt-contrib-jshint": "~0.7.1"
+        "grunt-contrib-jshint": "~0.7.1",
+        "vite": "^7.1.7"
     }
 }

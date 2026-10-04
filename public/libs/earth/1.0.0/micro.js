@@ -12,7 +12,8 @@ var µ = function() {
     var τ = 2 * Math.PI;
     var H = 0.0000360;  // 0.0000360°φ ~= 4m
     var DEFAULT_CONFIG = "current/wind/surface/level/orthographic";
-    var TOPOLOGY = isMobile() ? "/data/earth-topo-mobile.json?v2" : "/data/earth-topo.json?v2";
+    var BASE_URL = window.EARTH_BASE_URL || "/";
+    var TOPOLOGY = isMobile() ? BASE_URL + "data/earth-topo-mobile.json?v2" : BASE_URL + "data/earth-topo.json?v2";
 
     /**
      * @returns {Boolean} true if the specified value is truthy.
